@@ -1,6 +1,8 @@
 import Redis from "ioredis";
 
-const redisConnection = new Redis(
+const RedisClass = Redis as unknown as typeof Redis.default;
+
+const redisConnection = new RedisClass(
     process.env.REDIS_URL || "redis://localhost:6379",
     {
         maxRetriesPerRequest: null,

@@ -1,7 +1,10 @@
-interface PromptData {
+type PromptData = {
   topic: string;
   totalQuestions: number;
-}
+  totalMarks: number;
+  instructions: string;
+  questionTypes: string[];
+};
 
 export const QuestionPaperPrompt = (
   data: PromptData
