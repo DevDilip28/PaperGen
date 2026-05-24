@@ -1,6 +1,6 @@
 # 🚀 PaperGen — AI Assessment Creation Platform
 
-Live App: https://papergen-git-main-dilip-asdeos-projects.vercel.app/
+Live App: https://papergen-gilt.vercel.app/
 
 ---
 
