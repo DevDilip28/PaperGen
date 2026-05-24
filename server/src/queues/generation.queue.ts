@@ -1,6 +1,17 @@
 import { Queue } from "bullmq";
-import redisConnection from "../config/redis.js";
+import Redis from "ioredis";
 
-export const generationQueue = new Queue("assignment-generation", {
-    connection: redisConnection,
-});
+const connection = new Redis.default(
+  process.env.REDIS_URL as string,
+  {
+    maxRetriesPerRequest: null,
+    enableReadyCheck: false,
+  }
+);
+
+export const generationQueue = new Queue(
+  "assignment-generation",
+  {
+    connection,
+  }
+);

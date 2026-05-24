@@ -1,6 +1,6 @@
 import Redis from "ioredis";
 
-const redisConnection = new Redis(
+const redisConnection = new Redis.default(
   process.env.REDIS_URL as string,
   {
     maxRetriesPerRequest: null,
