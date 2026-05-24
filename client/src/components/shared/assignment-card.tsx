@@ -19,7 +19,7 @@ type AssignmentCardProps = {
   title: string;
   assignedDate: string;
   dueDate?: string;
-  status: "processing" | "completed" | "failed";
+  status: "pending" | "processing" | "completed" | "failed";
   onDelete?: (id: string) => void;
 };
 

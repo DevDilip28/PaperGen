@@ -13,13 +13,15 @@ export function DownloadPdfButton({ fileName }: Props) {
 
     if (!element) return;
 
+    const html2pdf = (await import("html2pdf.js")).default;
+
     const options = {
       margin: 0.5,
 
       filename: `${fileName}.pdf`,
 
       image: {
-        type: "jpeg",
+        type: "jpeg" as const,
         quality: 1,
       },
 
@@ -30,7 +32,7 @@ export function DownloadPdfButton({ fileName }: Props) {
       jsPDF: {
         unit: "in",
         format: "a4",
-        orientation: "portrait",
+        orientation: "portrait" as const,
       },
     };
 
