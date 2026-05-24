@@ -1,11 +1,9 @@
 import express from "express";
 import cors from "cors";
 
-import assignmentRoutes from "./routes/assignment.route.js"
+import assignmentRoutes from "./routes/assignment.route.js";
 
 const app = express();
-
-import cors from "cors";
 
 app.use(
     cors({
